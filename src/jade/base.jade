@@ -1,12 +1,13 @@
 extends layout
+block header
+  a(href="index.html")
+    img#logo(src="img/logo.svg",alt="Logo")
+
 block menu
-	ul
-		li
-			a(href="index.html")
-				img(src="img/logo.svg",alt="Logo")
-		li
-			a(href="productos.html") Productos
-		li
-			a(href="contacto.html") Dónde encontrarnos
+  ul
+    li
+      a(href="productos.html") Productos
+    li
+      a(href="contacto.html") Dónde encontrarnos
 block footer
-	p Mercería Nácar - Avenida General Sanjurjo 203-205 (15006 - A Coruña) Tel. 981 292 264
+  p Mercería Nácar - Avenida General Sanjurjo 203-205 (15006 - A Coruña) Tel. 981 292 264

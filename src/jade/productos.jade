@@ -1,12 +1,15 @@
 extends base
 block content
-	ul
-		li Pijamas y batas: Marie Claire, Kukuxumusu, Dormen, Promise, Gisela, Assman, Aralia.
-		li Sujetadores: Selmark, Gisela, Promise, Evelyn, Fig Fort, Ory, Naturana.
-		li Medias y pantys: Cherie, Golden Lady, Platino.
-		li Calzoncillos, slips y boxers: Fello, Abanderado, Pierre Cardin.
-		li Ropa interior: Avet, Intimidea, Rapife, Uros, Joven María.
-		li Calcetines: Cherie-Onne, Punto Blanco, Orion.
-		li Bañadores: Evelyn, Naturana, Cocoa.
-		li Artículos de pelo y complementos: Accesorios para broches, collares, diademas, orquillas, pinzas.
-		li Mercería: Cintas, hilos, puntillas, gomas, pasamanerías, botones, cremalleras, servicio de forrado de botones y de broches a presión.
+  product_list = [{title: "Interiores mujer y niña", content: "Even, Aralia, Intimidea, Avet, Pierre Cardin" }, {title: "Sujetadores", content: "Selmark, Gisela, Promise, Evelyn, Figfort, Ory, Naturana"}, {title: "Medias y pantys", content: "Cherie, Golden Lady, Platino, Pompea"}, {title: "Interiores hombre y niño", content: "Assman, Pierre Cardin, Kukuxumussu, Set, Fello, Abanderado"}, {title: "Calcetines", content: "Cherie-Onne, Punto Blanco, Orion"}, {title: "Pantys infantiles", content: "leotardos, calcetines colegiales, pantys de espuma y de piel de melocotón"}, {title: "Pijamas y batas", content: "Femy, Promise, Gisela, Assman, Aralia, Marie Claire, Kukuxumussu"}, {title: "Bañadores", content: "Bikinis y bañadores para playa y piscina"}, {title: "Complementos", content: "bufandas, pañuelos, gorros, guantes, fulares"}, {title: "Artículos de pelo", content: "diademas, horquillas, pinzas, cintas del pelo"}, {title: "Artículos de mercería", content: ["Hilos de costura Gütermann","Hilos mouliné DMC","Hilos de ganchillo Finca y DMC", "Agujas, alfileres y todo tipo de artículos para la costura","Botones y cremalleras","Lazos y cintas (al bies, de satén, gros-grain, en zig-zag...)","Gomas, puntillas y tiras bordadas","Rodilleras y pegatinas","Forrado de botones y colocación de broches a presión","Adornos de carnaval: plumas, cintas, boas, marabús.."]} ]
+  
+  ul.product-list
+    for product in product_list
+      li
+        img(src="img/daisy.png")
+        strong #{product.title}:
+        if typeof(product.content) === 'string'
+          |  #{product.content}.
+        else
+          ul
+            for el in product.content
+              li #{el}

@@ -1,8 +1,30 @@
 extends base
 block content
-	ul
-		li Horario
-		li Localización
-		li twitter
-		li email
-		li etc
+  .row-fluid
+    .span6
+      iframe#google-map(frameborder="0",scrolling="no",marginheight="0",marginwidth="0",src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=Merceria+Nacar,+A+Coru%C3%B1a,+Espa%C3%B1a&amp;aq=0&amp;oq=mercer%C3%ADa+nacar,+A+&amp;sll=37.0625,-95.677068&amp;sspn=57.510723,79.013672&amp;t=h&amp;ie=UTF8&amp;hq=Merceria+Nacar,&amp;hnear=A+Coru%C3%B1a,+Galicia,+Espa%C3%B1a&amp;z=14&amp;iwloc=A&amp;output=embed")
+      p Ver 
+        a(target="blank",href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=es&amp;geocode=&amp;q=Merceria+Nacar,+A+Coru%C3%B1a,+Espa%C3%B1a&amp;aq=0&amp;oq=mercer%C3%ADa+nacar,+A+&amp;sll=37.0625,-95.677068&amp;sspn=57.510723,79.013672&amp;t=h&amp;ie=UTF8&amp;hq=Merceria+Nacar,&amp;hnear=A+Coru%C3%B1a,+Galicia,+Espa%C3%B1a&amp;z=14&amp;iwloc=A")
+          | Mercería Nácar
+        | &nbsp;en un mapa más grande
+    .span6#contact-info
+      p Nos encontramos en Avenida General Sanjurjo 203-205 bajo 15006 A Coruña.
+      p Horario:
+        ul
+          li De lunes a viernes:
+            ul
+              li Mañanas: 9:30 - 14:00
+              li Tardes: 16:30 - 20:45
+          li Sábados:
+            ul
+              li Mañanas: 9:30 - 14:00
+      p Contacta con nosotros:
+        ul
+          li e-mail:
+            a(href="mailto:tienda@merceria-nacar.es",target="blank")  tienda@merceria-nacar.es 
+          li Teléfono: 981 29 22 64
+      p Síguenos en Twitter:
+        a(target="blank",href="https://twitter.com/nacarcoruna") &nbsp;@nacarcoruna
+
+
+

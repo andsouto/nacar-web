@@ -1,19 +1,134 @@
 @import "../../external/bootstrap/less/bootstrap.less";
 
+.background (@img) {
+    background: -moz-linear-gradient(-45deg, rgba(254,252,234,0.85) 0%, rgba(237,231,120,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(254,252,234,0.85)), color-stop(100%,rgba(237,231,120,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-45deg, rgba(254,252,234,0.85) 0%,rgba(237,231,120,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-45deg, rgba(254,252,234,0.85) 0%,rgba(237,231,120,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-45deg, rgba(254,252,234,0.85) 0%,rgba(237,231,120,1) 100%); /* IE10+ */
+    background: linear-gradient(135deg, rgba(254,252,234,0.85) 0%,rgba(237,231,120,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9fefcea', endColorstr='#ede778',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    //background-size: contain;
+}
+html {
+    min-height: 100%;
+    .background(url('img/bg-red.png') no-repeat right bottom);
+}
+
+body {
+    min-height: 100%;
+    background-color: transparent;
+}
+
+.container-fluid {
+    padding: 0;
+    position: relative;
+    min-height: 100%;
+    > .row-fluid {
+	padding-top: 30px;
+	padding-bottom: 100px;
+    }
+}
+
+header {
+    padding: 1em;
+    position: relative;
+    img#logo {
+	height: 128px;
+    }
+    &:after{
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: url('img/daisy-bg.jpg') no-repeat;
+	background-size: cover;
+	opacity: 0.7;
+	z-index: -1;
+	border-radius: 0 0 20px 20px;
+    }
+}
+
 #main-menu {
-	ul {
-		margin: 0;
+    width: 17%;
+    ul {
+	margin: 0;
+    }	
+    li {
+	list-style: none;
+	text-align: center;	
+	padding: 5%;
+	a {
+	    font-size: 120%;
+	    text-shadow: 0 0 0.1em gray;
+	    &:hover {
+		text-decoration: none;
+		text-shadow: 0 0 0.4em gray;
+	    }
 	}
-	li {
-		list-style: none;
-		padding: 4%;
+	a img {
+	    width: 70%;
+	    padding: 10%;
 	}
+    }
 }
 
 #content {
-	padding: 4% 0 4% 0;
+    width: 80%;
+
+    // Index section
+    #info {
+	padding: 2em 0.5em;
+	text-align: justify;
+	font-size: 130%;
+    }
+
+    // Contact section
+    #google-map {
+	width: 100%;
+	height: 400px;
+    }
+    #contact-info {
+	padding-top: 40px;
+    }
+
+    // Products section
+    ul.product-list {
+	>li {
+	    list-style: none;
+	    padding: 0.4em 0;
+	    strong {
+		font-size: 115%;
+		text-shadow: 0 0 0.2em gray;
+	    }
+	    img {
+		width: 1.5em;
+		height: 1.5em;
+		padding-right: 0.4em;
+	    }
+	    ul {
+		padding-left: 1.5em;
+		li {
+		    padding: 0.2em 0;
+		    list-style: disc;	    
+		}
+	    }
+	}
+    }
 }
 
 footer {
-	text-align: center;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 10%;
+    padding: 2% 0;
+}
+
+strong {
+    color: darken(@linkColor,10%);
 }
