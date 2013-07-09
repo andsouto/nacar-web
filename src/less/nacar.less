@@ -1,5 +1,5 @@
 @import "../../external/bootstrap/less/bootstrap.less";
-
+@linkColor: rgb(12,104,19);
 .background (@img) {
     background: -moz-linear-gradient(-45deg, rgba(254,252,234,0.85) 0%, rgba(237,231,120,1) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(254,252,234,0.85)), color-stop(100%,rgba(237,231,120,1))); /* Chrome,Safari4+ */
@@ -10,6 +10,14 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9fefcea', endColorstr='#ede778',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     //background-size: contain;
 }
+
+::selection {
+    background: fadeout(lighten(@linkColor,25%),75%);
+}
+::-moz-selection {
+    background: fadeout(lighten(@linkColor,25%),75%);
+}
+
 html {
     min-height: 100%;
     .background(url('img/bg-red.png') no-repeat right bottom);
