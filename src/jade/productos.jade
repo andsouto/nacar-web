@@ -1,15 +1,59 @@
-extends base
+extends template/base
 block content
-  product_list = [{title: "Interiores mujer y niña", content: "Even, Aralia, Intimidea, Avet, Pierre Cardin" }, {title: "Sujetadores", content: "Selmark, Gisela, Promise, Evelyn, Figfort, Ory, Naturana"}, {title: "Medias y pantys", content: "Cherie, Golden Lady, Platino, Pompea"}, {title: "Interiores hombre y niño", content: "Assman, Pierre Cardin, Kukuxumussu, Set, Fello, Abanderado"}, {title: "Calcetines", content: "Cherie-Onne, Punto Blanco, Orion"}, {title: "Pantys infantiles", content: "leotardos, calcetines colegiales, pantys de espuma y de piel de melocotón"}, {title: "Pijamas y batas", content: "Femy, Promise, Gisela, Assman, Aralia, Marie Claire, Kukuxumussu"}, {title: "Bañadores", content: "Bikinis y bañadores para playa y piscina"}, {title: "Complementos", content: "bufandas, pañuelos, gorros, guantes, fulares"}, {title: "Artículos de pelo", content: "diademas, horquillas, pinzas, cintas del pelo"}, {title: "Artículos de mercería", content: ["Hilos de costura Gütermann","Hilos mouliné DMC","Hilos de ganchillo Finca y DMC", "Agujas, alfileres y todo tipo de artículos para la costura","Botones y cremalleras","Lazos y cintas (al bies, de satén, gros-grain, en zig-zag...)","Gomas, puntillas y tiras bordadas","Rodilleras y pegatinas","Forrado de botones y colocación de broches a presión","Adornos de carnaval: plumas, cintas, boas, marabús.."]} ]
-  
+  -
+    var productList = [{
+      title: "Interiores mujer y niña",
+      content: "Even, Aralia, Avet, Pierre Cardin, Rapife"
+    }, {
+      title: "Sujetadores",
+      content: "Selmark, Gisela, Promise, Evelyn, Figfort, Naturana"
+    }, {
+      title: "Medias y pantys",
+      content: "Cherie, Golden Lady, Platino"
+    }, {
+      title: "Interiores hombre y niño",
+      content: "Assman, Pierre Cardin, Kukuxumussu, Set, Fello, Abanderado, Rapife"
+    }, {
+      title: "Calcetines",
+      content: "Cherie-Onne, Punto Blanco, Orion, Condor"
+    }, {
+      title: "Pantys infantiles",
+      content: "leotardos, calcetines colegiales, pantys de espuma y de piel de melocotón"
+    }, {
+      title: "Pijamas y batas",
+      content: "Promise, Gisela, Assman, Aralia, Marie Claire, Kukuxumussu, E&J"
+    }, {
+      title: "Bañadores",
+      content: "Bikinis y bañadores para playa y piscina"
+    }, {
+      title: "Complementos",
+      content: "bufandas, pañuelos, gorros, guantes, fulares"
+    }, {
+      title: "Artículos de pelo",
+      content: "diademas, horquillas, pinzas, cintas del pelo"
+    }, {
+      title: "Artículos de mercería",
+      content: [
+        "Hilos de costura Gütermann",
+        "Hilos mouliné DMC",
+        "Hilos de ganchillo Finca y DMC",
+        "Agujas, alfileres y todo tipo de artículos para la costura",
+        "Botones y cremalleras",
+        "Lazos y cintas (al bies, de satén, gros-grain, en zig-zag...)",
+        "Gomas, puntillas y tiras bordadas",
+        "Rodilleras y pegatinas",
+        "Forrado de botones y colocación de broches a presión",
+        "Adornos de carnaval: plumas, cintas, boas, marabús.."
+      ]
+    }];
+
   ul.product-list
-    for product in product_list
+    each product in productList
       li
-        img(src="img/daisy.png")
         strong #{product.title}:
         if typeof(product.content) === 'string'
-          |  #{product.content}.
+          span &nbsp;#{product.content}.
         else
           ul
-            for el in product.content
-              li #{el}
+            each el in product.content
+              li= el

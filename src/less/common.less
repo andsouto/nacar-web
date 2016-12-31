@@ -1,0 +1,42 @@
+//@import "node_modules/bootstrap/less/bootstrap.less";
+
+@link-color: rgb(12,104,19);
+@link-hover-color: darken(@link-color, 10%);
+@link-hover-decoration: none;
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #333333;
+}
+
+ul, ol {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+a {
+  color: @link-color;
+  text-decoration: none;
+	&:hover, &:focus {
+		color: @link-hover-color;
+    text-decoration: @link-hover-decoration;
+	}
+}
+
+img {
+	vertical-align: middle;
+}
+
+strong {
+	color: @link-hover-color;
+}
+
+::selection {
+	background: fadeout(lighten(@link-color,25%),75%);
+}
