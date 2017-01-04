@@ -14,7 +14,8 @@ const uglify = require('gulp-uglify');
 const jade = require('gulp-jade');
 const less = require('gulp-less');
 const autoprefixer = require('gulp-autoprefixer');
-const minifyCSS = require('gulp-minify-css');
+const cleanCss = require('gulp-clean-css');
+const imagemin = require('gulp-imagemin');
 const browserSync = require('browser-sync').create();
 const path = require('path');
 const swPrecache = require('sw-precache');
@@ -43,10 +44,7 @@ gulp.task('less', function () {
 		.pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
 		.pipe(gulpif(!argv.production, sourcemaps.init()))
 		.pipe(less())
-		.pipe(autoprefixer({
-			browsers: ['> 1%'],
-			cascade: false
-		})).pipe(gulpif(argv.production, minifyCSS()))
+		.pipe(autoprefixer()).pipe(gulpif(argv.production, cleanCss({keepSpecialComments: 0})))
 		.pipe(gulpif(!argv.production, sourcemaps.write()))
 		.pipe(gulp.dest(DEST_PATH))
 		.pipe(browserSync.stream())
@@ -54,8 +52,9 @@ gulp.task('less', function () {
 		.pipe(gulpif(argv.production, gulp.dest(DEST_PATH)));
 });
 
-gulp.task('img', function () {
+gulp.task('img', function() {
 	return gulp.src(IMG_PATH)
+		.pipe(imagemin())
 		.pipe(gulp.dest(path.join(DEST_PATH, 'img')))
 		.pipe(browserSync.stream())
 		.pipe(filter(['**/*.svg']))

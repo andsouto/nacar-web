@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -8,12 +7,9 @@
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="434.22592"
-   height="208.9353"
+	 viewBox="0 0 434 209"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.3.1 r9886"
    sodipodi:docname="logo.svg">
   <defs
      id="defs4" />
@@ -22,19 +18,7 @@
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="207.9105"
-     inkscape:cy="113.92838"
-     inkscape:document-units="px"
-     inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1280"
-     inkscape:window-height="1000"
-     inkscape:window-x="0"
-     inkscape:window-y="24"
-     inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
@@ -52,30 +36,28 @@
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-150.59699,-172.00345)">
     <rect
        id="rect3018-0-9-7-5-4-0"
-       width="93.081978"
+       width="93"
        height="52"
-       x="491.74094"
-       y="328.93875"
-       style="opacity:0.7;fill:#e4e400;fill-opacity:0.92941176" />
+       x="492"
+       y="329"
+       style="opacity:0.7;fill:#e4e400;fill-opacity:0.9" />
     <rect
        id="rect3018-2-1-5-9-1"
-       width="89.689117"
-       height="99.305664"
-       x="400.48398"
-       y="225.40457"
-       style="opacity:0.7;fill:#f3f55c;fill-opacity:0.81481479" />
+       width="90"
+       height="100"
+       x="400"
+       y="225"
+       style="opacity:0.7;fill:#f3f55c;fill-opacity:0.8" />
     <g
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        id="text2985-5-8-8-6-4">
       <path
          d="m 217.84499,324.70584 c -3.26408,-5.47199 -6.91207,-11.32799 -10.944,-17.568 -4.03207,-6.33598 -8.20806,-12.67197 -12.528,-19.008 -4.32005,-6.43196 -8.73605,-12.62395 -13.248,-18.576 -4.41604,-6.04794 -8.64003,-11.47193 -12.672,-16.272 l 0,71.424 -17.856,0 0,-99.792 14.832,0 c 3.83997,4.0321 7.96796,8.83209 12.384,14.4 4.41596,5.47208 8.83195,11.18408 13.248,17.136 4.51194,5.95206 8.83194,11.95206 12.96,18 4.22393,5.95205 7.96793,11.52004 11.232,16.704 l 0,-66.24 18,0 0,99.792 -15.408,0"
-         style="font-size:144px;font-variant:normal;font-weight:500;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu Medium"
+         style="font-size:144px;font-variant:normal;font-weight:500;font-stretch:normal;font-family:Ubuntu"
          id="path3937" />
       <path
          d="m 310.39874,324.70584 c -1.12007,-3.28 -2.28006,-6.51999 -3.48,-9.72 -1.20006,-3.19999 -2.36006,-6.47998 -3.48,-9.84 l -35.04,0 c -1.12002,3.36002 -2.28002,6.68001 -3.48,9.96 -1.12002,3.20001 -2.24002,6.4 -3.36,9.6 l -15.72,0 c 3.12,-8.87999 6.07999,-17.07998 8.88,-24.6 2.79999,-7.51997 5.51998,-14.63996 8.16,-21.36 2.71998,-6.71995 5.39998,-13.11994 8.04,-19.2 2.63997,-6.07993 5.35997,-12.07992 8.16,-18 l 14.28,0 c 2.79995,5.92008 5.51995,11.92007 8.16,18 2.63994,6.08006 5.27994,12.48005 7.92,19.2 2.71993,6.72004 5.47993,13.84003 8.28,21.36 2.87992,7.52002 5.87992,15.72001 9,24.6 l -16.32,0 m -24.48,-67.08 c -1.84004,4.24006 -3.96004,9.40006 -6.36,15.48 -2.32003,6.08005 -4.76003,12.68004 -7.32,19.8 l 27.36,0 c -2.56005,-7.11996 -5.04005,-13.75995 -7.44,-19.92 -2.40005,-6.15994 -4.48004,-11.27994 -6.24,-15.36"
@@ -96,17 +78,17 @@
     </g>
     <rect
        id="rect3018-3-7-1-0-9-1"
-       width="93.081978"
+       width="93"
        height="52"
-       x="305.26743"
-       y="172.00345"
-       style="opacity:0.7;fill:#e4e400;fill-opacity:0.93055558" />
+       x="305"
+       y="172"
+       style="opacity:0.7;fill:#e4e400;fill-opacity:0.9" />
     <g
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
        id="text3815">
       <path
          d="m 312.93892,220.3437 -16.92,16.44 -5.64,-5.04 15.36,-18.48 7.2,7.08"
-         style="font-size:120px;font-variant:normal;font-stretch:normal;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+         style="font-size:120px;font-variant:normal;font-stretch:normal;font-family:Ubuntu"
          id="path3948" />
     </g>
   </g>
