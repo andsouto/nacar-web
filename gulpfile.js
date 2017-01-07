@@ -21,6 +21,7 @@ const path = require('path');
 const swPrecache = require('sw-precache');
 const del = require('del');
 const gzip = require('gulp-gzip');
+const sitemap = require('gulp-sitemap');
 
 const SRC_DIR = 'src';
 const DEST_PATH = 'public';
@@ -36,7 +37,29 @@ gulp.task('jade', function () {
 		.pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
 		.pipe(jade({pretty: !argv.production}))
 		.pipe(gulp.dest(DEST_PATH))
-		.pipe(browserSync.stream({once: true}));
+		.pipe(browserSync.stream({once: true}))
+		.pipe(sitemap({
+			siteUrl: 'https://www.merceria-nacar.es',
+			changefreq: 'monthly',
+			mappings: [{
+				pages: ['index.html'],
+				priority: 1,
+			},{
+				pages: ['news.html'],
+				priority: 0,
+			},{
+				pages: ['productos.html'],
+				priority: 0,
+			},{
+				pages: ['location.html'],
+				priority: 0.8,
+			},{
+				pages: ['contact.html'],
+				priority: 0.8,
+			}],
+		})).pipe(gulpif(argv.production, gulp.dest(DEST_PATH)))
+		.pipe(gulpif(argv.production, gzip()))
+		.pipe(gulpif(argv.production, gulp.dest(DEST_PATH)));;
 });
 
 gulp.task('less', function () {

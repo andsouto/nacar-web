@@ -1,6 +1,8 @@
 RewriteEngine On
-RewriteCond %{HTTPS} !=on
-RewriteRule ^/?(.*) https://www.merceria-nacar.es/$1 [R,L]
+RewriteCond %{HTTPS} off
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule .* https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 <IfModule mod_deflate.c>
 AddOutputFilterByType DEFLATE text/plain
@@ -20,7 +22,7 @@ AddOutputFilterByType DEFLATE image/svg+xml
 	RewriteEngine On
 	RewriteCond %{HTTP:Accept-Encoding} gzip
 	RewriteCond %{REQUEST_FILENAME}.gz -f
-	RewriteRule (.*\.(css|js|svg))$ ../../../../../$1.gz [L]
+	RewriteRule (.*\.(css|js|svg|xml))$ ../../../../../$1.gz [L]
 </IfModule>
 AddEncoding x-gzip .gz
 <FilesMatch .*\.css.gz>
@@ -31,5 +33,8 @@ AddEncoding x-gzip .gz
 </FilesMatch>
 <FilesMatch .*\.svg.gz>
 	ForceType image/svg+xml
+</FilesMatch>
+<FilesMatch .*\.xml.gz>
+	ForceType application/xml
 </FilesMatch>
 # END HACK TO GZIP

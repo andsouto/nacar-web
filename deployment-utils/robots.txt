@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /logs/
+Disallow: /old/
+
+Sitemap: http://www.merceria-nacar.es/sitemap.xml
