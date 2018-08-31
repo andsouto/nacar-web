@@ -26,14 +26,15 @@ const sitemap = require('gulp-sitemap');
 const SRC_DIR = 'src';
 const DEST_PATH = 'public';
 
-const JADE_PATH = path.join(SRC_DIR, 'jade/*.jade')
+const JADE_ENTRY_PATH = path.join(SRC_DIR, 'jade/*.jade')
+const JADE_PATH = path.join(SRC_DIR, 'jade/**/*.jade')
 const LESS_PATH = path.join(SRC_DIR, 'less/**/*.less');
 const LESS_ENTRY = path.join(SRC_DIR, 'less/nacar.less');
 const IMG_PATH = path.join(SRC_DIR, 'img/**/*');
 const JS_PATH = path.join(SRC_DIR, '**/*.js');
 
 gulp.task('jade', function () {
-	return gulp.src(JADE_PATH)
+	return gulp.src(JADE_ENTRY_PATH)
 		.pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
 		.pipe(jade({pretty: !argv.production}))
 		.pipe(gulp.dest(DEST_PATH))
@@ -134,7 +135,12 @@ gulp.task('watch', ['build'], function () {
 
 gulp.task('serve', ['watch'], function() {
 	browserSync.init({
-		server: {baseDir: "./public"},
+		server: {
+			baseDir: "./public",
+			serveStaticOptions: {
+				extensions: ["html"],
+			},
+		},
 	});
 });
 
